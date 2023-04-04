@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice</title>
+    <style>
+      body {
+        display: block;
+        background-color: rgb(112, 90, 169);
+        align-items: center;
+        margin: auto;
+        padding: 1rem;
+        min-height: 100vh;
+      }
+      form {
+        display: flex;
+        align-items: center;
+
+        margin: auto;
+      }
+      div.text-box {
+        border: 1px solid;
+        min-height: 5rem;
+        width: 20rem;
+        display: flex;
+        background-color: rgb(30, 6, 54);
+        color: rgb(255, 254, 254);
+        margin: auto;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      button {
+        background-color: rgb(15, 174, 23);
+        color: rgb(255, 255, 255);
+        font-weight: bold;
+        font-family: sans-serif;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <form class="formbox">
+      <label for="name">Name: </label>
+      <input
+        type="text"
+        name="name"
+        id="Name"
+        placeholder="Enter Your Name"
+        required
+      />
+      <br /><br />
+      <label for="email">Email ID: </label>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        placeholder="Pass Your Valid Email Id"
+        required
+      />
+      <br />
+      <br />
+      <button type="submit" id="jsonbtn">Convert to JSON</button>
+      <br /><br /><br />
+    </form>
+    <div class="text-box">
+      <span id="jsontext"></span>
+    </div>
+
+    <script>
+      const name = document.getElementById("Name");
+      const email = document.getElementById("email");
+      const jsonbtn = document.getElementById("jsonbtn");
+
+      jsonbtn.addEventListener("click", function () {
+        const data = {
+          Name: name.value,
+          email: email.value,
+        };
+        jsontext.innerHTML = JSON.stringify(data);
+
+        const inputs = document.querySelectorAll("#Name, #email");
+
+        inputs.forEach((input) => {
+          input.value = "";
+        });
+      });
+    </script>
+  </body>
+</html>
