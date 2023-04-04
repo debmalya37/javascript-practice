@@ -1,0 +1,10 @@
+#preview-img {
+    margin: 10px 10px 10px 10px;
+    size: 30px;
+    max-width: 90vw;
+    
+}
+body {
+    background-color: black;
+    color: aqua;
+}
