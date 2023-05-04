@@ -1,10 +1,15 @@
 // function exercise
-// Write a JavaScript function that returns a string that has letters in alphabetical order
+// #1  Write a JavaScript function that returns a string that has letters in alphabetical order
 
 function alpha_order(name) {
-  return name.split("").sort().join("");
+  const letterOnly = name.replace(/[^a-zA-Z]/g, "");
+  const output = letterOnly.split("").sort().join("");
+  return output;
 }
-console.log(alpha_order("dcba"));
+
+const Name = "fedcba";
+const result = alpha_order(Name);
+console.log(result);
 // methods used :
 // The split() method is used to split a String object into an array of strings by separating the string into substrings.
 // Code : console.log('32243'.split(""));
