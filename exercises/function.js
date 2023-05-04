@@ -25,13 +25,18 @@ console.log(result);
 
 // #2 Write a JavaScript function that checks whether a passed string is a palindrome or not?
 
+// Define the isPalindrome function
 function isPalindrome(str) {
   // Convert the string to lowercase and remove non-alphanumeric characters
   str = str.toLowerCase().replace(/[^a-z0-9]/g, "");
 
   // Reverse the string and compare with the original
-  return str === str.split("").reverse().join("");
+  if (str === str.split("").reverse().join("")) {
+    console.log(`"${str}" is a palindrome.`);
+  } else {
+    console.log(`${str} is Not a palindrome.`);
+  }
 }
 
-const Name2 = isPalindrome("bob");
-console.log(Name2);
+// Call the function with the string "boob"
+isPalindrome("boob");
