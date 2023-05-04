@@ -22,3 +22,16 @@ console.log(result);
 // The join() method is used to join all elements of an array into a string.
 // Code : console.log(["2", "2", "3", "3", "4"].join(""));
 // Output : "22334"
+
+// #2 Write a JavaScript function that checks whether a passed string is a palindrome or not?
+
+function isPalindrome(str) {
+  // Convert the string to lowercase and remove non-alphanumeric characters
+  str = str.toLowerCase().replace(/[^a-z0-9]/g, "");
+
+  // Reverse the string and compare with the original
+  return str === str.split("").reverse().join("");
+}
+
+const Name2 = isPalindrome("bob");
+console.log(Name2);
