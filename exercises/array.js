@@ -8,3 +8,10 @@ function joinArr(arr) {
 }
 
 console.log(joinArr(mycolor));
+
+// Write a JavaScript function to clone an array.
+
+const main = [1, 2, 3, 4, 5];
+const clone = [...main];
+
+console.log(clone);
